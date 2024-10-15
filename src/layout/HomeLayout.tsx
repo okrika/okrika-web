@@ -9,7 +9,7 @@ export default function HomeLayout({
   children
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="w-full p-5">
+    <div className="w-full py-5 px-8">
       <header className="flex items-center justify-center">
         <nav className="w-[10%] flex rounded-[40px] shadow-lg md:w-4/5 lg:w-4/5 px-8 pb-7 pt-5 items-center justify-between">
           <h1>Okrika</h1>
@@ -58,7 +58,7 @@ export default function HomeLayout({
         </div>
         <div className="w-full flex items-end justify-between">
           {" "}
-          <div className="w-1/6 flex flex-col items-center space-y-4">
+          <div className="w-1/8 flex flex-col items-center space-y-4">
             <h1>Okrika</h1>
             <div className="flex items-center space-x-4">
               <span>
