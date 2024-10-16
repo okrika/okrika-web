@@ -2,7 +2,29 @@ import Button from "../../components/button/Button";
 import HomeLayout from "../../layout/HomeLayout";
 import AvatarGroup from "../../assets/images/avatar-group.jpg";
 import StarIcon from "../../assets/icons/StarIcon";
+import HairPin from "../../assets/images/floral-hair-pin.png";
+import BalanceShoe from "../../assets/images/sneakers.png";
+import Jordan from "../../assets/images/jordan.png";
+import Iphone from "../../assets/images/iphone.png";
+import TrendingProducts from "./components/TrendingProducts";
 
+export type TTrendingProducts = {
+  name: string;
+  price: number;
+  imgUrl: ImageData;
+  likes: string;
+}[];
+export const trendingProducts = [
+  { name: "Floral Hair Pin", price: 4000, imgUrl: HairPin, likes: "1.5k" },
+  {
+    name: "New Balance Sneakers",
+    price: 7500,
+    imgUrl: BalanceShoe,
+    likes: "765"
+  },
+  { name: "Nike Jordan Shoes", price: 15000, imgUrl: Jordan, likes: "500" },
+  { name: "Iphone 11 Pro", price: 120000, imgUrl: Iphone, likes: "1.3k" }
+];
 export default function Home() {
   return (
     <HomeLayout>
@@ -38,26 +60,37 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
+        <section className="mb-8">
           <h1 className="text-3xl font-bold text-center">Shop by Category</h1>
           <div className="grid grid-cols-3 grid-rows-2 mt-4 gap-x-4 gap-y-8 h-[80vh]">
-            <div className="bg-fashion bg-cover h-full bg-center text-white text-xl flex items-center justify-center rounded-lg col-start-1 col-span-1">
-              <span>Fashion/Clothing</span>
+            <div className="bg-fashion bg-cover shadow-lg h-full bg-center text-white flex items-center justify-center rounded-lg col-start-1 col-span-1">
+              <div className="backdrop-brightness-50 rounded-lg flex items-center  justify-center w-full h-full">
+                <span className="">Fashion/Clothing</span>
+              </div>
             </div>
-            <div className="bg-home bg-cover h-full bg-center text-white text-xl flex items-center justify-center rounded-lg col-start-1 ">
-              <span>Home and Accessories</span>
+            <div className="bg-home bg-cover shadow-lg h-full bg-center text-white flex items-center justify-center rounded-lg col-start-1 ">
+              <div className="backdrop-brightness-50 rounded-lg flex items-center  justify-center w-full h-full">
+                <span>Home and Accessories</span>
+              </div>
             </div>
-            <div className="bg-phone bg-cover h-full bg-center text-white text-xl flex items-center justify-center rounded-lg col-start-2 row-start-1 row-span-2">
-              <span>Phones & Devices</span>
+            <div className="bg-phone bg-cover shadow-lg h-full bg-center text-white flex items-center justify-center rounded-lg col-start-2 row-start-1 row-span-2">
+              <div className="backdrop-brightness-50 rounded-lg flex items-center  justify-center w-full h-full">
+                <span>Phones & Devices</span>
+              </div>
             </div>
-            <div className="bg-health bg-cover h-full bg-center text-white text-xl flex items-center justify-center rounded-lg col-start-3 col-span-1 row-start-1">
-              <span>Health and Beauty</span>
+            <div className="bg-health bg-cover shadow-lg h-full bg-center text-white flex items-center justify-center rounded-lg col-start-3 col-span-1 row-start-1">
+              <div className="backdrop-brightness-50 rounded-lg flex items-center  justify-center w-full h-full">
+                <span>Health and Beauty</span>
+              </div>
             </div>
-            <div className="bg-others bg-cover h-full bg-center text-white text-xl flex items-center justify-center rounded-lg col-start-3 col-span-1 row-start-2">
-              <span>Other Categories</span>
+            <div className="bg-others bg-cover shadow-lg h-full bg-center text-white flex items-center justify-center rounded-lg col-start-3 col-span-1 row-start-2">
+              <div className="backdrop-brightness-50 rounded-lg flex items-center  justify-center w-full h-full">
+                <span>Other Categories</span>
+              </div>
             </div>
           </div>
         </section>
+        <TrendingProducts />
       </div>
     </HomeLayout>
   );

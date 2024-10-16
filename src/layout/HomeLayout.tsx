@@ -9,7 +9,7 @@ export default function HomeLayout({
   children
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="w-full py-5 px-8">
+    <div className="w-full pt-5 px-8">
       <header className="flex items-center justify-center">
         <nav className="w-[10%] flex rounded-[40px] shadow-lg md:w-4/5 lg:w-4/5 px-8 pb-7 pt-5 items-center justify-between">
           <h1>Okrika</h1>
