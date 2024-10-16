@@ -7,11 +7,14 @@ import BalanceShoe from "../../assets/images/sneakers.png";
 import Jordan from "../../assets/images/jordan.png";
 import Iphone from "../../assets/images/iphone.png";
 import TrendingProducts from "./components/TrendingProducts";
+import Laptop from "../../assets/images/laptop.png";
+import AllProducts from "./components/AllProducts";
+import TickIcon from "../../assets/icons/TickIcon";
 
-export type TTrendingProducts = {
+export type TProducts = {
   name: string;
   price: number;
-  imgUrl: ImageData;
+  imgUrl: string;
   likes: string;
 }[];
 export const trendingProducts = [
@@ -25,6 +28,25 @@ export const trendingProducts = [
   { name: "Nike Jordan Shoes", price: 15000, imgUrl: Jordan, likes: "500" },
   { name: "Iphone 11 Pro", price: 120000, imgUrl: Iphone, likes: "1.3k" }
 ];
+export const allProducts: TProducts = [
+  { name: "Dell Xpire Laptop", price: 350000, imgUrl: Laptop, likes: "197" },
+  { name: "Hisense Refrigerator", price: 120000, imgUrl: Laptop, likes: "109" },
+  { name: "Hp Pavillion Laptop", price: 300000, imgUrl: Laptop, likes: "129" },
+  { name: "Full make-up kit", price: 25000, imgUrl: Laptop, likes: "190" },
+  { name: "Skirt and shirt", price: 16000, imgUrl: Laptop, likes: "150" },
+  { name: "Casual Office Shoes", price: 12000, imgUrl: Laptop, likes: "69" },
+  {
+    name: "Ergonomic Working Chair",
+    price: 55000,
+    imgUrl: Laptop,
+    likes: "100"
+  },
+  { name: "Iphone 13", price: 325000, imgUrl: Laptop, likes: "151" },
+  { name: "Reading Table", price: 50000, imgUrl: Laptop, likes: "40" },
+  { name: "12pcs set of pots", price: 120000, imgUrl: Laptop, likes: "14" },
+  { name: "Samsung S10+", price: 105000, imgUrl: Laptop, likes: "52" },
+  { name: "Macbook Charger Type C", price: 25000, imgUrl: Laptop, likes: "23" }
+];
 export default function Home() {
   return (
     <HomeLayout>
@@ -32,8 +54,24 @@ export default function Home() {
         <section className="flex relative flex-col items-start  space-y-8 w-2/3">
           <h1 className="uppercase lg:text-5xl">Shop Your Thrift Items Here</h1>
           <div className="w-3/5 flex items-center justify-between">
-            <span>Fast and easy sales</span> <span>Easy to navigate</span>{" "}
-            <span>Reliable sellers</span>
+            <div className="flex items-center space-x-2">
+              <span>
+                <TickIcon />
+              </span>
+              <span>Fast and easy sales</span>
+            </div>{" "}
+            <div className="flex items-center space-x-2">
+              <span>
+                <TickIcon />
+              </span>
+              <span>Easy to navigate</span>
+            </div>{" "}
+            <div className="flex items-center space-x-2">
+              <span>
+                <TickIcon />
+              </span>
+              <span>Reliable sellers</span>
+            </div>
           </div>
           <Button className="w-1/3 mt-4">Create account for free</Button>
           <div className="flex items-center space-x-2">
@@ -91,6 +129,7 @@ export default function Home() {
           </div>
         </section>
         <TrendingProducts />
+        <AllProducts />
       </div>
     </HomeLayout>
   );

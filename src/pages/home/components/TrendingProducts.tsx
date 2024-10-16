@@ -8,7 +8,7 @@ export default function TrendingProducts() {
       <div className="flex w-full items-center justify-between mb-8">
         {" "}
         <h1 className="text-4xl font-bold">Trending Products</h1>{" "}
-        <Link className="flex items-center space-x-2" to="">
+        <Link className="flex items-center space-x-2" to="/">
           <span>See all</span>
           <span>
             <CircularArrowIcon />
