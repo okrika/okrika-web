@@ -1,26 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
- :root {
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  /* background-color: #eeebeb; */
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --montserrat: "Montserrat", sans-serif;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Podkova";
+  src: url("../assets/fonts/Podkova-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("../assets/fonts/Poppins-Bold.ttf");
 }
 
 * {
   margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
   padding: 0;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-family: "Podkova", sans-serif;
+}
+
+.okrika-bold {
+  font-family: "Poppins Bold";
 }
