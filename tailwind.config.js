@@ -10,6 +10,9 @@ export default {
         phone: "url('./assets/images/phone.png')",
         health: "url('./assets/images/health.png')",
         others: "url('./assets/images/others.png')"
+      },
+      fontFamily: {
+        montserrat: ["var(montserrat)", "sans-serif"]
       }
     }
   },
