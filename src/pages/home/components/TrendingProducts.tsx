@@ -1,6 +1,6 @@
 import ProductCard from "../../../components/product-card";
 import { Link } from "@tanstack/react-router";
-import CircularArrowIcon from "../../../assets/icons/CircularArrowIcon";
+import CircularArrowIcon from "../../../components/icons/CircularArrowIcon";
 import { trendingProducts } from "..";
 export default function TrendingProducts() {
   return (

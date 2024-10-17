@@ -12,6 +12,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Podkova";
+  src: url("../assets/fonts/Podkova-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -29,4 +41,9 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-family: "Podkova", sans-serif;
+}
+
+.okrika-bold {
+  font-family: "Poppins Bold";
 }

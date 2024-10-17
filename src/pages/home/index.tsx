@@ -1,15 +1,18 @@
 import Button from "../../components/button/Button";
 import HomeLayout from "../../layout/HomeLayout";
-import AvatarGroup from "../../assets/images/avatar-group.jpg";
-import StarIcon from "../../assets/icons/StarIcon";
-import HairPin from "../../assets/images/floral-hair-pin.png";
-import BalanceShoe from "../../assets/images/sneakers.png";
-import Jordan from "../../assets/images/jordan.png";
-import Iphone from "../../assets/images/iphone.png";
+import AvatarGroup from "/assets/images/avatar-group.jpg";
+import StarIcon from "../../components/icons/StarIcon";
+import HairPin from "/assets/images/floral-hair-pin.png";
+import BalanceShoe from "/assets/images/sneakers.png";
+import Jordan from "/assets/images/jordan.png";
+import Iphone from "/assets/images/iphone.png";
 import TrendingProducts from "./components/TrendingProducts";
-import Laptop from "../../assets/images/laptop.png";
+import Laptop from "/assets/images/laptop.png";
 import AllProducts from "./components/AllProducts";
-import TickIcon from "../../assets/icons/TickIcon";
+import TickIcon from "../../components/icons/TickIcon";
+import Hisense from "/assets/images/hisense.png";
+import Pavillion from "/assets/images/pavillion.png";
+import MakeUp from "/assets/images/makeup-kit.png";
 
 export type TProducts = {
   name: string;
@@ -30,9 +33,19 @@ export const trendingProducts = [
 ];
 export const allProducts: TProducts = [
   { name: "Dell Xpire Laptop", price: 350000, imgUrl: Laptop, likes: "197" },
-  { name: "Hisense Refrigerator", price: 120000, imgUrl: Laptop, likes: "109" },
-  { name: "Hp Pavillion Laptop", price: 300000, imgUrl: Laptop, likes: "129" },
-  { name: "Full make-up kit", price: 25000, imgUrl: Laptop, likes: "190" },
+  {
+    name: "Hisense Refrigerator",
+    price: 120000,
+    imgUrl: Hisense,
+    likes: "109"
+  },
+  {
+    name: "Hp Pavillion Laptop",
+    price: 300000,
+    imgUrl: Pavillion,
+    likes: "129"
+  },
+  { name: "Full make-up kit", price: 25000, imgUrl: MakeUp, likes: "190" },
   { name: "Skirt and shirt", price: 16000, imgUrl: Laptop, likes: "150" },
   { name: "Casual Office Shoes", price: 12000, imgUrl: Laptop, likes: "69" },
   {
@@ -130,6 +143,9 @@ export default function Home() {
         </section>
         <TrendingProducts />
         <AllProducts />
+        <section className="mt-10">
+          <h1 className="capitalise text-5xl">What our users say</h1>
+        </section>
       </div>
     </HomeLayout>
   );
