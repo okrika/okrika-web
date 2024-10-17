@@ -4,7 +4,7 @@ import ProfileIcon from "../components/icons/ProfileIcon";
 import { SearhIcon } from "../components/icons/SearchIcon";
 import WhatsappIcon from "../components/icons/WhatsappIcon";
 import XIcon from "../components/icons/XIcon";
-import Logo from "/assets/logo.svg";
+import Logo from "/logo.svg";
 
 export default function HomeLayout({
   children
