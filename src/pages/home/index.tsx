@@ -13,7 +13,10 @@ import TickIcon from "../../components/icons/TickIcon";
 import Hisense from "/assets/images/hisense.png";
 import Pavillion from "/assets/images/pavillion.png";
 import MakeUp from "/assets/images/makeup-kit.png";
-
+import Chair from "/assets/images/chair.png";
+import Carousel from "../../components/carousel";
+import Avatar from "/assets/images/avatar.jpg";
+import { FeedbackCard } from "./components/FeedbackCard";
 export type TProducts = {
   name: string;
   price: number;
@@ -64,7 +67,7 @@ export default function Home() {
   return (
     <HomeLayout>
       <div className="w-full pt-12">
-        <section className="flex relative flex-col items-start  space-y-8 w-2/3">
+        <section className="flex relative flex-col items-start  space-y-4 w-full mb-[180px]">
           <h1 className="uppercase lg:text-5xl">Shop Your Thrift Items Here</h1>
           <div className="w-3/5 flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -86,32 +89,51 @@ export default function Home() {
               <span>Reliable sellers</span>
             </div>
           </div>
-          <Button className="w-1/3 mt-4">Create account for free</Button>
-          <div className="flex items-center space-x-2">
-            <img className="" src={AvatarGroup} alt="Avatar Group" />
-            <div className="flex flex-col items-start ">
-              <div className="flex items-center">
-                <span>
-                  <StarIcon />
-                </span>
-                <span>
-                  <StarIcon />
-                </span>
-                <span>
-                  <StarIcon />
-                </span>
-                <span>
-                  <StarIcon />
-                </span>
-                <span>
-                  <StarIcon />
-                </span>
+          <div className="flex w-full items-center justify-between">
+            <div className="flex items-start w-2/5 flex-col space-y-8">
+              {" "}
+              <Button className="w-2/5 mt-4">Create account for free</Button>
+              <div className="flex items-center space-x-2">
+                <img className="" src={AvatarGroup} alt="Avatar Group" />
+                <div className="flex flex-col items-start ">
+                  <div className="flex items-center">
+                    <span>
+                      <StarIcon />
+                    </span>
+                    <span>
+                      <StarIcon />
+                    </span>
+                    <span>
+                      <StarIcon />
+                    </span>
+                    <span>
+                      <StarIcon />
+                    </span>
+                    <span>
+                      <StarIcon />
+                    </span>
+                  </div>
+                  <span>from 200+ reviews</span>
+                </div>
               </div>
-              <span>from 200+ reviews</span>
             </div>
+            <Carousel autoplay={true} className="w-1/2 absolute">
+              <div>
+                <img src={Chair} width={501} height={300} alt="" />
+              </div>
+              <div>
+                <img src={Hisense} width={501} height={300} alt="Hisense" />
+              </div>
+              <div>
+                <img src={Pavillion} width={501} height={300} alt="Pavillion" />
+              </div>
+              <div>
+                <img src={Iphone} width={501} height={300} alt="Iphone" />
+              </div>
+            </Carousel>
           </div>
         </section>
-        <section className="mb-8">
+        <section className="mb-[180px]">
           <h1 className="text-3xl font-bold text-center">Shop by Category</h1>
           <div className="grid grid-cols-3 grid-rows-2 mt-4 gap-x-4 gap-y-8 h-[80vh]">
             <div className="bg-fashion bg-cover shadow-lg h-full bg-center text-white flex items-center justify-center rounded-lg col-start-1 col-span-1">
@@ -143,8 +165,26 @@ export default function Home() {
         </section>
         <TrendingProducts />
         <AllProducts />
-        <section className="mt-10">
-          <h1 className="capitalise text-5xl">What our users say</h1>
+        <section className="mb-[180px] flex flex-col items-center">
+          <h1 className="capitalise text-5xl mb-10">What our users say</h1>
+
+          <div className="flex items-center space-x-4">
+            <FeedbackCard name="Emmanuel John" avatar={Avatar}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ad
+              harum quae. Harum porro ipsum cum sed minima. Obcaecati maxime non
+              nesciunt at facilis pariatur, ea corporis veniam optio eos!
+            </FeedbackCard>
+            <FeedbackCard name="Emmanuel John" avatar={Avatar}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ad
+              harum quae. Harum porro ipsum cum sed minima. Obcaecati maxime non
+              nesciunt at facilis pariatur, ea corporis veniam optio eos!
+            </FeedbackCard>
+            <FeedbackCard name="Emmanuel John" avatar={Avatar}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ad
+              harum quae. Harum porro ipsum cum sed minima. Obcaecati maxime non
+              nesciunt at facilis pariatur, ea corporis veniam optio eos!
+            </FeedbackCard>
+          </div>
         </section>
       </div>
     </HomeLayout>

@@ -4,7 +4,7 @@ import CircularArrowIcon from "../../../components/icons/CircularArrowIcon";
 import { trendingProducts } from "..";
 export default function TrendingProducts() {
   return (
-    <section className="w-full">
+    <section className="w-full mb-[180px]">
       <div className="flex w-full items-center justify-between mb-8">
         {" "}
         <h1 className="text-4xl font-bold">Trending Products</h1>{" "}

@@ -3,7 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: { "okrika-green": "#5CCA95", "okrika-orange": "#F46312" },
+      colors: {
+        "okrika-green": "#5CCA95",
+        "okrika-orange": "#F46312",
+        "okrika-purple": "#8E68C5"
+      },
       backgroundImage: {
         fashion: "url('./assets/images/clothing.png')",
         home: "url('./assets/images/home.png')",
