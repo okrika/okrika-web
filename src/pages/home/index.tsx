@@ -15,7 +15,8 @@ import Pavillion from "/assets/images/pavillion.png";
 import MakeUp from "/assets/images/makeup-kit.png";
 import Chair from "/assets/images/chair.png";
 import Carousel from "../../components/carousel";
-
+import Avatar from "/assets/images/avatar.jpg";
+import { FeedbackCard } from "./components/FeedbackCard";
 export type TProducts = {
   name: string;
   price: number;
@@ -116,12 +117,18 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <Carousel className="w-1/2 absolute">
+            <Carousel autoplay={true} className="w-1/2 absolute">
               <div>
                 <img src={Chair} width={501} height={300} alt="" />
               </div>
               <div>
                 <img src={Hisense} width={501} height={300} alt="Hisense" />
+              </div>
+              <div>
+                <img src={Pavillion} width={501} height={300} alt="Pavillion" />
+              </div>
+              <div>
+                <img src={Iphone} width={501} height={300} alt="Iphone" />
               </div>
             </Carousel>
           </div>
@@ -158,8 +165,26 @@ export default function Home() {
         </section>
         <TrendingProducts />
         <AllProducts />
-        <section className="mb-[180px]">
-          <h1 className="capitalise text-5xl">What our users say</h1>
+        <section className="mb-[180px] flex flex-col items-center">
+          <h1 className="capitalise text-5xl mb-10">What our users say</h1>
+
+          <div className="flex items-center space-x-4">
+            <FeedbackCard name="Emmanuel John" avatar={Avatar}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ad
+              harum quae. Harum porro ipsum cum sed minima. Obcaecati maxime non
+              nesciunt at facilis pariatur, ea corporis veniam optio eos!
+            </FeedbackCard>
+            <FeedbackCard name="Emmanuel John" avatar={Avatar}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ad
+              harum quae. Harum porro ipsum cum sed minima. Obcaecati maxime non
+              nesciunt at facilis pariatur, ea corporis veniam optio eos!
+            </FeedbackCard>
+            <FeedbackCard name="Emmanuel John" avatar={Avatar}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ad
+              harum quae. Harum porro ipsum cum sed minima. Obcaecati maxime non
+              nesciunt at facilis pariatur, ea corporis veniam optio eos!
+            </FeedbackCard>
+          </div>
         </section>
       </div>
     </HomeLayout>

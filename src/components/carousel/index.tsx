@@ -4,18 +4,23 @@ import Slider from "react-slick";
 
 export default function Carousel({
   children,
-  className
+  className,
+  autoplay = false
 }: {
   children: React.ReactNode;
   className?: string;
+  autoplay?: boolean;
 }) {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 2000,
+    autoPlay: autoplay,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 0
+    initialSlide: 0,
+    fade: true,
+    easing: "ease-in-out"
   };
 
   return (
